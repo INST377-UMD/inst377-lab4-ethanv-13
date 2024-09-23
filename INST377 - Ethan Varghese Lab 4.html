@@ -1,0 +1,95 @@
+<html>
+    <head>
+        <title>INST377 - Ethan Varghese Lab 4</title>
+        <style>
+        body {
+            background-color: hotpink;
+        }
+        .Main {
+            display: inline-block;
+            width: 25%;
+            border-radius: 15px;
+            height: 10%;
+            margin-left: 10px;
+        }
+        .Main-Box {
+            text-align: center;
+            background-color: rgb(16, 222, 230);
+            color: black;
+            padding: 10px;
+            margin: 10px;
+            border: 2px solid black;
+        }
+        .br {
+            display: block;
+            margin: 10px 0;
+            
+        }
+        </style>
+    </head>
+
+    <body>
+        <h1>INST377 - Lab 4</h1>
+            <div class="Main">
+                <div class="Main-Box">
+                        <label for="Name">Name: </label>
+                        <input type="text" id="Name" required>
+
+                        <input type="submit" value="Alert Me!">
+                </div>
+            </div>
+
+            <div class="Main">
+                <div class="Main-Box">
+                    <button onclick="changeColor()">Change Color</button>
+
+                    <script>
+                        function changeColor(color) {
+                            if(document.body.style.background == 'hotpink') {
+                    const t = document.body.style.background = 'orange';
+                } else {
+                    const t = document.body.style.background = 'hotpink';
+                }
+            }
+                    </script>
+                </div>
+            </div>
+            <br>
+            <div class="Main">
+                <div class="Main-Box">
+                    <form name="testForm" onsubmit="return(formValidation())">
+                        <label>Text Tester: </label>
+                        <input type="text" id="tester">
+                        <input type="submit" value="Validate Test!">
+                    </form>
+            
+                    <script type="text/javascript">
+                        function formValidation() {
+                            const validationRegex = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+                            if (validationRegex.test(document.testForm.tester.value)) {
+                                alert('How about.... nah :(')
+                                return false
+                            }
+            
+                            return true;
+                        }
+                    </script>
+                </div>
+            </div>
+            <div class="Main">
+                <div class="Main-Box">
+                    <button onclick="changeColor()">Add Text</button>
+
+                    <script>
+                        function changeColor(color) {
+                            if(document.body.style.background == 'hotpink') {
+                    const t = document.body.style.background = 'orange';
+                } else {
+                    const t = document.body.style.background = 'hotpink';
+                }
+            }
+                    </script>
+                </div>
+            </div>
+    </body>
+</html>
